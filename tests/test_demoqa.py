@@ -1,4 +1,3 @@
-from selene import browser, have
 from pages.registration_page import RegistrationPage
 
 def test_enter_data():
