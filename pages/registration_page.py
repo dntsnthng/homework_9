@@ -1,7 +1,6 @@
 from selene import browser, command, have
 import resource
 
-
 class RegistrationPage:
     def open(self):
         browser.open('/automation-practice-form')
@@ -19,7 +18,7 @@ class RegistrationPage:
         browser.element(f'.react-datepicker__day--00{user.day}').click()
         browser.element('#subjectsInput').type(user.subjects).press_enter()
         browser.element('[for="hobbies-checkbox-3"]').click()
-        browser.element('#uploadPicture').send_keys(resource.path('Screenshot_1.png'))
+        browser.element('#uploadPicture').send_keys(resource.path(user.photo))
         browser.element('#currentAddress').type(user.address)
         browser.element('#react-select-3-input').type(user.state).press_enter()
         browser.element('#react-select-4-input').type(user.city).press_enter()
